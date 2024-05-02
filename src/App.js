@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { Komponenta1, Komponenta2, Komponenta3, Komponenta4 } from './Components';
+
+const randomString = require("random-string");
+const str = randomString({length: 20});
+const str2 = randomString({length: 10, numeric: false, letters: false, special: true});
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
+        <h1>First app</h1>
+        <h2>{str2}</h2>
+        <Komponenta1 />
+        <Komponenta2 />
+        <Komponenta3 />
+        <Komponenta4 />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +28,11 @@ function App() {
         >
           Learn React
         </a>
+        <p>{str}</p>
       </header>
-    </div>
+    </>
   );
 }
 
 export default App;
+
